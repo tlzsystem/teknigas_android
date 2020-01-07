@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_instalaciones">
+
+    <fragment
+        android:id="@+id/nav_instalaciones"
+        android:name="cl.alebran.teknogas.ui.instalaciones.InstalacionesFragment"
+        android:label="@string/menu_instalaciones"
+        tools:layout="@layout/fragment_instalaciones">
+        <action
+            android:id="@+id/action_instalaciones_to_detalle_instalaciones"
+            app:destination="@+id/nav_detalle_instalacion" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_inspecciones"
+        android:name="cl.alebran.teknogas.ui.inspecciones.InspeccionesFragment"
+        android:label="@string/menu_inspecciones"
+        tools:layout="@layout/fragment_inspecciones" />
+
+
+    <fragment
+        android:id="@+id/nav_descargar"
+        android:name="cl.alebran.teknogas.ui.descargar.DescargarFragment"
+        android:label="@string/menu_descargar"
+        tools:layout="@layout/fragment_descargar" />
+
+    <fragment
+        android:id="@+id/nav_enviar"
+        android:name="cl.alebran.teknogas.ui.enviar.EnviarFragment"
+        android:label="@string/menu_enviar"
+        tools:layout="@layout/fragment_enviar" />
+    <fragment
+        android:id="@+id/nav_detalle_instalacion"
+        android:name="cl.alebran.teknogas.ui.instalaciones.DetalleInstalacionFragment"
+        android:label="Detalle Instalación"
+        tools:layout="@layout/fragment_detalle_instalacion" >
+        <argument
+            android:name="instalacion"
+            app:argType="cl.alebran.teknogas.persistencia.instalaciones.Instalaciones" />
+        <action
+            android:id="@+id/action_nav_detalle_instalacion_to_departamentoListFragment"
+            app:destination="@id/departamentoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/departamentoListFragment"
+        android:name="cl.alebran.teknogas.ui.departamento.DepartamentoListFragment"
+        android:label="Lista inmuebles"
+        tools:layout="@layout/fragment_departamento_list" >
+        <argument
+            android:name="id_instalacion"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_departamentoListFragment_to_PHBaseFragment"
+            app:destination="@id/PHBaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/phFragment"
+        android:name="cl.alebran.teknogas.ui.ph.PhFragment"
+        android:label="PH"
+        tools:layout="@layout/fragment_ph" />
+    <fragment
+        android:id="@+id/PHBaseFragment"
+        android:name="cl.alebran.teknogas.ui.ph.PHBaseFragment"
+        android:label="PH"
+        tools:layout="@layout/fragment_phbase" />
+    <fragment
+        android:id="@+id/phDefectosFragment"
+        android:name="cl.alebran.teknogas.ui.ph.PhDefectosFragment"
+        android:label="Defectos"
+        tools:layout="@layout/fragment_ph_defectos" >
+        <action
+            android:id="@+id/action_phDefectosFragment_to_defectosBuscarFragment"
+            app:destination="@id/defectosBuscarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/defectosBuscarFragment"
+        android:name="cl.alebran.teknogas.ui.defectos.DefectosBuscarFragment"
+        android:label="Buscar defectos"
+        tools:layout="@layout/fragment_defectos_buscar" />
+</navigation>

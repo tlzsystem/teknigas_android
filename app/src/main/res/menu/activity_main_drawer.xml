@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_instalaciones"
+            android:icon="@drawable/ic_domain_black_24dp"
+            android:title="@string/menu_instalaciones" />
+        <item
+            android:id="@+id/nav_inspecciones"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:title="@string/menu_inspecciones" />
+
+    </group>
+
+    <item android:title="Sincronización">
+        <menu>
+            <item
+                android:id="@+id/nav_descargar"
+                android:icon="@drawable/ic_cloud_download_black_24dp"
+                android:title="@string/menu_descargar" />
+            <item
+                android:id="@+id/nav_enviar"
+                android:icon="@drawable/ic_cloud_upload_black_24dp"
+                android:title="@string/menu_enviar" />
+        </menu>
+    </item>
+
+</menu>

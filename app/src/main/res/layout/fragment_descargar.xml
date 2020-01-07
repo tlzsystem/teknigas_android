@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.descargar.DescargarFragment"
+    android:padding="48dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="168dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:text="@string/label_ultima_recibir" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBarDescargar"
+            android:layout_width="wrap_content"
+            android:layout_height="311dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/btn_descargar"
+            android:layout_width="176dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_cloud_download_black_24dp"
+            android:drawablePadding="10dp"
+            android:text="@string/btn_descargar"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/btn_borrar_descargar"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_cloud_download_black_24dp"
+            android:drawablePadding="10dp"
+            android:text="@string/btn_borrar"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
